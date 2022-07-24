@@ -1,0 +1,3 @@
+(executable
+ (name shortcuts)
+ (libraries lwt lwt.unix macron))

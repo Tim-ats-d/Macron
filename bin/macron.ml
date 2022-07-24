@@ -1,0 +1,1 @@
+let () = Macron.Daemon.run ()

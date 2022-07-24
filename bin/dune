@@ -1,0 +1,8 @@
+(executable
+ (name macron)
+ (libraries macron))
+
+(install
+ (section bin)
+ (files
+  (macron.exe as macron)))

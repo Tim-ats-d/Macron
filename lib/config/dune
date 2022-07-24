@@ -1,0 +1,5 @@
+(library
+ (name config)
+ (preprocess
+  (pps ppx_deriving.show ppx_sexp_conv))
+ (libraries core sexplib))
