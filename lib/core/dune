@@ -1,5 +1,3 @@
 (library
  (name core)
- (preprocess
-  (pps ppx_deriving.show))
  (libraries lwt lwt.unix))

@@ -17,4 +17,3 @@ type t = Mouse : Mouse.t -> t | Keyboard : Keyboard.t -> t
 
 val mouse : Mouse.t -> t
 val keyboard : Keyboard.t -> t
-val pp : Format.formatter -> t -> unit

@@ -48,7 +48,6 @@ end
 
 type t = { keys : Keybind.t; action : Action.t }
 
-val pp : Format.formatter -> t -> unit
 val make : keys:Keybind.t -> action:Action.t -> t
 
 module Infix : sig

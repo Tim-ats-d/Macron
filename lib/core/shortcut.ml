@@ -11,7 +11,6 @@ module Keybind = struct
     | Mouse of (int * int) comb
     | Keyboard of Input.Keyboard.status comb
     | Then of t * t
-  [@@deriving show]
 
   and 'a comb = ByCode of int * ('a -> bool)
 
@@ -46,7 +45,6 @@ module Action = struct
   type t =
     | ExtProcess of (string * string array)
     | Thunk of (unit -> unit Lwt.t)
-  [@@deriving show { with_path = false }]
 
   let ext_process cmd args = ExtProcess (cmd, args)
   let thunk t = Thunk t
@@ -61,7 +59,6 @@ module Action = struct
 end
 
 type t = { keys : Keybind.t; action : Action.t }
-[@@deriving show { with_path = false }]
 
 let make ~keys ~action = { keys; action }
 
